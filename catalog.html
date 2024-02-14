@@ -61,37 +61,37 @@
                         <legend class="catalog-filter-title">Производители</legend>
                         <ul class="catalog-filter-list">
                             <li class="catalog-filter-item">
-                                <label class="control">
+                                <label class="control-label">
                                     <input class="control-input" type="checkbox" name="bed-head-for-men">
                                     Bed Head for Men
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
+                                <label class="control-label">
                                     <input class="control-input" type="checkbox" name="Homme-Deep-Cleansing-Cool" checked>
                                     Homme Deep Cleansing Cool
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
+                                <label class="control-label">
                                     <input class="control-input" type="checkbox" name="So-Intense" checked>
                                     So Intense
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
+                                <label class="control-label">
                                     <input class="control-input" type="checkbox" name="Sprekenhus">
                                     Sprekenhus
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
+                                <label class="control-label">
                                     <input class="control-input" type="checkbox" name="Firm-Store">
                                     Firm Store
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
+                                <label class="control-label">
                                     <input class="control-input" type="checkbox" name="Winter-Body" checked>
                                     Winter Body
                                 </label>
@@ -102,19 +102,19 @@
                         <legend class="catalog-filter-title">Группы товаров</legend>
                         <ul class="catalog-filter-list">
                             <li class="catalog-filter-item">
-                                <label class="control">
+                                <label class="control-label">
                                     <input class="control-input" type="radio" name="product-group" value="shaving-accessories">
                                     Бритвенные принадлежности
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
+                                <label class="control-label">
                                     <input class="control-input" type="radio" name="product-group" value="care-products" checked>
                                     Средства для ухода
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
+                                <label class="control-label">
                                     <input class="control-input" type="radio" name="product-group" value="accessories">
                                     Аксессуары
                                 </label>
@@ -123,17 +123,19 @@
                     </fieldset>
                     <button class="button" type="submit">Показать</button>
                 </form>
-                <select class="select-control" aria-label="Сортировка">
-                    <option value="popular">Сначала популярные</option>
-                    <option value="cheap">Сначала дешёвые</option>
-                    <option value="expensive">Сначала дорогие</option>
-                </select>
-                <a class="button button-light" href="#">
-                    <span class="visually-hidden">Показать список</span>
-                </a>
-                <a class="button" href="#">
-                    <span class="visually-hidden">Показать карточки</span>
-                </a>
+                <div class="sorting-container">
+                    <select class="select-control" aria-label="Сортировка">
+                        <option value="popular">Сначала популярные</option>
+                        <option value="cheap">Сначала дешёвые</option>
+                        <option value="expensive">Сначала дорогие</option>
+                    </select>
+                    <a class="button button-light" href="#">
+                        <span class="visually-hidden">Показать список</span>
+                    </a>
+                    <a class="button" href="#">
+                        <span class="visually-hidden">Показать карточки</span>
+                    </a>
+                </div>
                 <ul class="product-card-list">
                     <li class="product-card">
                         <a class="product-card-link" href="#">
