@@ -39,6 +39,66 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+/*Buttons*/
+.button{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #000000;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.button:hover,
+.footer-social-link:hover{
+    background-color: #814B18;
+}
+.button:focus,
+.footer-social-link:focus{
+    outline: 2px solid #DBB590;
+    background-color: #814B18;
+}
+.button:disabled,
+.footer-social-link:disabled{
+    color: #E7E7E7;
+    background-color: #595959;
+}
+.button:disabled:hover{
+    background-color: #595959;
+    outline: none;
+    cursor: default;
+}
+.button + .button{
+    margin-left: 16px;
+}
+.button-all{
+    padding-right: 44px;
+    background-image: url("../images/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center right 20px;
+}
+.button-feedback{
+    color: #242424;
+    background-color: #FFFFFF;
+}
+.button-feedback:hover{
+    background-color: #DBB590;
+}
+.button-feedback:focus{
+    outline: 2px solid #AF7842;
+    background-color: #DBB590;
+}
+
+/*Pages*/
 html{
     height: 100%;
 }
@@ -66,16 +126,17 @@ body{
 .navigation-list{
     display: flex;
     flex-wrap: wrap;
-    width: 460px;
+    width: 470px;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 .navigation-user{
-    width: 310px;
+    max-width: 210px;
     margin-left: auto;
 }
 .navigation-link{
+    position: relative;
     display: block;
     padding: 24px 20px;
     font-family: "PT Sans Narrow", sans-serif;
@@ -86,8 +147,47 @@ body{
     text-transform: uppercase;
     color: inherit;
 }
+.navigation-link-current::before{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    height: 4px;
+    background-color: #FFFFFF;
+    content: "";
+}
+.navigation-link:hover{
+    background-color: #595959;
+}
+.navigation-link:focus{
+    box-shadow: inset 0 0 0 4px #E7E7E7;
+    outline: none;
+}
+.navigation-link-login{
+    padding-left: 44px;
+}
+.navigation-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    fill: #DBDBDB;
+}
+.navigation-link:hover .navigation-icon{
+    fill: #242424;
+}
+.navigation-link:focus .navigation-icon{
+    fill: #DBDBDB;
+}
+.navigation-link-login .navigation-icon{
+    right: auto;
+    left: 20px;
+    margin: auto 0;
+}
 .navigation-user .navigation-link{
-    min-height: 16px;
+    min-height: 22px;
     min-width: 16px;
 }
 /*Main*/
@@ -127,6 +227,7 @@ body{
     width: 277px;
 }
 .advantages-title{
+    position: relative;
     margin: 0;
     margin-bottom: 56px;
     font-family: "PT Sans Narrow", sans-serif;
@@ -134,11 +235,23 @@ body{
     line-height: 35px;
     text-transform: uppercase;
 }
+.advantages-title::before{
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin-left: -9px;
+    background-color: #FFFFFF;
+    content: "";
+    transform: rotate(45deg);
+}
 .advantages-description{
     margin: 0;
 }
 /*Index columns*/
 .index-columns{
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 31px;
@@ -146,6 +259,20 @@ body{
     color: #242424;
     background-color: #FBF7F4;
     background-image: url("../images/pattern.png");
+}
+.index-columns::after{
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    width: 0;
+    border-right: 1px dashed #595959;
+    content: "";
+}
+.index-columns:first-of-type::after {
+    left: 470px;
+}
+.index-columns:last-child::after{
+    left: 430px;
 }
 .index-columns:last-child{
     margin-bottom: 0;
@@ -165,13 +292,30 @@ body{
 }
 .services-list{
     padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
     line-height: 28px;
     font-weight: 700;
     list-style-type: none;
 }
+.services-item{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+.services-item::before{
+    flex-grow: 1;
+    order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-bottom: 2px dotted rgba(89, 89, 89, 0.5);
+    content: "";
+}
 .services-price{
+    order: 3;
     color: #AF7842;
 }
 
@@ -191,12 +335,12 @@ body{
 
 /*Contacts*/
 .contacts{
-    width: 352px;
+    width: 350px;
     font-weight: 700;
 }
 .contacts-title{
     margin: 0;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 32px;
     line-height: 35px;
@@ -206,11 +350,17 @@ body{
     font-style: normal;
 }
 .contacts-subtitle{
+    margin: 0;
+    margin-top: 22px;
+    padding: 0;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
     line-height: 28px;
     text-transform: uppercase;
     color: #AF7842;
+}
+.contacts-address-text{
+    margin: 8px 0;
 }
 .contacts-phone{
     font-family: "PT Sans Narrow", sans-serif;
@@ -220,7 +370,10 @@ body{
     text-transform: uppercase;
     color: #242424;
 }
-
+.contacts-navigation{
+    margin-top: 21px;
+    margin-bottom: 0;
+}
 /*Appointment*/
 .appointment{
     width: 430px;
@@ -267,19 +420,18 @@ body{
 }
 
 /*Footer*/
-.page-footer-container{
-    display: flex;
-    padding: 40px 0;
-
-    width: 940px;
-    margin: 0 auto;
-}
 .page-footer{
     font-size: 14px;
     font-weight: 700;
     color: #FFFFFF;
     background-color: #242424;
     background-image: url("../images/pattern.png");
+}
+.page-footer-container{
+    display: flex;
+    width: 940px;
+    padding: 40px 0;
+    margin: 0 auto;
 }
 .page-footer a{
     color: #FFFFFF;
@@ -288,6 +440,9 @@ body{
     color: #DBB590;
 }
 .page-footer-title{
+    margin: 0;
+    margin-bottom: 14px;
+    padding: 0;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
     line-height: 28px;
@@ -297,17 +452,45 @@ body{
     width: 200px;
     margin-right: 130px;
 }
+.footer-contacts-logo{
+    display: block;
+    margin: 0;
+    margin-bottom: 24px;
+}
+.footer-about-text {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
 .footer-contacts-address{
+    margin-bottom: 16px;
     font-style: normal;
 }
 .footer-contacts-address p{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4px;
     line-height: 20px;
 }
 .footer-contacts-phone{
+    display: block;
+    margin: 0;
+    margin-bottom: 16px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
     line-height: 28px;
     text-decoration-line: underline;
+}
+.newsletter-form{
+    display: flex;
+
+}
+.newsletter-button{
+    width: 56px;
+    height: 44px;
+    background-image: url(../images/arrow-tail.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
 }
 .footer-contacts-map-link{
     font-family: "PT Sans Narrow", sans-serif;
@@ -324,6 +507,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin: 0;
+    margin-bottom: 28px;
     padding: 0;
     list-style-type: none;
 }
@@ -335,9 +519,31 @@ body{
 .footer-social-item:nth-child(3n){
     margin-right: 0;
 }
+.footer-social-link{
+    display: block;
+    width: 56px;
+    height: 44px;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+}
+.footer-social-tw{
+    background-image: url(../images/twitter-icon.svg);
+}
+.footer-social-vk{
+    background-image: url(../images/vk-icon.svg);
+}
+.footer-social-instagram{
+    background-image: url(../images/instagram-icon.svg);
+}
+
 /*Inner*/
 .navigation-logo{
+    display: flex;
+    align-items: center;
     width: 140px;
+
     margin-right: 100px;
 }
 .main-inner{
@@ -361,14 +567,33 @@ body{
 .breadcrumbs{
     display: flex;
     margin: 0;
+    margin-bottom: 48px;
     padding: 0;
     line-height: 22px;
     color: #242424;
     list-style-type: none;
 }
-.breadcrumbs-link {
+.breadcrumbs-item{
+    position: relative;
+    display: block;
     margin-right: 32px;
+}
+.breadcrumbs-link {
     color: inherit;
+}
+.breadcrumbs-item::after{
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: -20px;
+    width: 8px;
+    height: 8px;
+    background-color: #242424;
+    content: "";
+    transform: rotate(45deg);
+}
+.breadcrumbs-item:last-child::after{
+    content: none;
 }
 /*Catalog filter*/
 .catalog-products{
@@ -400,9 +625,36 @@ body{
     color: #242424;
     background-color: #FFFFFF;
 }
-.sorting-container .button{
+.sorting-type{
+    margin-right: auto;
+}
+.card-grid-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 56px;
     height: 44px;
+    background-color: #FFFFFF;
+}
+.card-grid-toggle:hover{
+    background-color: #814B18;
+}
+.card-grid-toggle:focus{
+    outline: 2px solid #DBB590;
+    background-color: #814B18;
+}
+.card-grid-toggle:hover svg,
+.card-grid-toggle:focus svg{
+    fill: #FFFFFF;
+}
+.card-grid-toggle svg{
+    fill: #000000;
+}
+.card-grid-toggle-current{
+    background-color: #000000;
+}
+.card-grid-toggle-current svg{
+    fill: #FFFFFF;
 }
 /*Product card*/
 .product-card-list{
@@ -463,6 +715,18 @@ body{
 .pagination-item:not(:last-child){
     margin-right: 8px;
 }
+.pagination-prev{
+    background-image: url(../images/arrow-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+}
+.pagination-next{
+    background-image: url(../images/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+}
 .pagination-link{
     display: block;
     box-sizing: border-box;
@@ -474,6 +738,13 @@ body{
     text-decoration: none;
     color: #FFFFFF;
     background-color: #000000;
+}
+.pagination-link:hover{
+    background-color: #814B18;
+}
+.pagination-link:focus{
+    outline: 2px solid #DBB590;
+    background-color: #814B18;
 }
 .pagination-current{
     color: #242424;
