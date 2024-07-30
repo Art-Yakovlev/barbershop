@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Каталог: Барбершоп</title>
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
         <header class="page-header">
@@ -59,37 +60,37 @@
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="control-input" type="checkbox" name="bed-head-for-men">
-                                    Bed Head for Men
+                                    <span class="control-label">Bed Head for Men</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="control-input" type="checkbox" name="homme-deep-cleansing-cool" checked>
-                                    Homme Deep Cleansing Cool
+                                    <span class="control-label">Homme Deep Cleansing Cool</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="control-input" type="checkbox" name="so-intense" checked>
-                                    So Intense
+                                    <span class="control-label">So Intense</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="control-input" type="checkbox" name="sprekenhus">
-                                    Sprekenhus
+                                    <span class="control-label">Sprekenhus</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="control-input" type="checkbox" name="firm-store">
-                                    Firm Storе
+                                    <span class="control-label">Firm Storе</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="control-input" type="checkbox" name="winter-body">
-                                    Winter Body
+                                    <span class="control-label">Winter Body</span>
                                 </label>
                             </li>
                         </ul>
@@ -100,19 +101,19 @@
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="control-input" type="radio" name="product-group" value="shaving-supplies">
-                                    Бритвенные принадлежности
+                                    <span class="control-label">Бритвенные принадлежности</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="control-input" type="radio" name="product-group" value="care-products" checked>
-                                    Средства для ухода
+                                    <span class="control-label">Средства для ухода</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="control-input" type="radio" name="product-group" value="accessories">
-                                    Аксессуары
+                                    <span class="control-label">Аксессуары</span>
                                 </label>
                             </li>
                         </ul>
@@ -120,24 +121,26 @@
                     <button class="button" type="submit">Показать</button>
                 </form>
                 <div class="right-column">
-                    <select class="select-control" aria-label="Сортировка">
-                        <option value="popular">Сначала популярное</option>
-                        <option value="cheap">Сначала дешёвое</option>
-                        <option value="expensive">Сначала дорогое</option>
-                    </select>
-                    <a class="button button-light" href="#">
-                        <span class="visually-hidden">Показать список</span>
-                    </a>
-                    <a class="button button-current" href="#">
-                        <span class="visually-hidden">Показать карточки</span>
-                    </a>
+                    <div class="sorting-container">
+                        <select class="select-control" aria-label="Сортировка">
+                            <option value="popular">Сначала популярное</option>
+                            <option value="cheap">Сначала дешёвое</option>
+                            <option value="expensive">Сначала дорогое</option>
+                        </select>
+                        <a class="button button-light" href="#">
+                            <span class="visually-hidden">Показать список</span>
+                        </a>
+                        <a class="button button-current" href="#">
+                            <span class="visually-hidden">Показать карточки</span>
+                        </a>
+                    </div>
                     <ul class="product-card-list">
                         <li class="product-card">
                             <a class="product-card-link" href="#">
                                 <img class="product-card-image" src="images/catalog/1.jpg" width="220" height="200" alt="">
                                 <h3 class="product-card-title">Шампунь для мужчин Brews Daily</h3>
                             </a>
-                            <span class="product-card=price">744 ₽</span>
+                            <span class="product-card-price">744 ₽</span>
                             <a class="button product-card-button" href="#">Купить</a>
                         </li>
                         <li class="product-card">
@@ -145,7 +148,7 @@
                                 <img class="product-card-image" src="images/catalog/2.jpg" width="220" height="200" alt="">
                                 <h3 class="product-card-title">Syoss шампунь Men Power & Strength</h3>
                             </a>
-                            <span class="product-card=price">160 ₽</span>
+                            <span class="product-card-price">160 ₽</span>
                             <a class="button product-card-button" href="#">Купить</a>
                         </li>
                         <li class="product-card">
@@ -153,7 +156,7 @@
                                 <img class="product-card-image" src="images/catalog/3.jpg" width="220" height="200" alt="">
                                 <h3 class="product-card-title">Schauma шампунь для мужчин «Сила и объём с хмелем»Шампунь для мужчин Brews Daily</h3>
                             </a>
-                            <span class="product-card=price">94 ₽</span>
+                            <span class="product-card-price">94 ₽</span>
                             <a class="button product-card-button" href="#">Купить</a>
                         </li>
                         <li class="product-card">
@@ -161,7 +164,7 @@
                                 <img class="product-card-image" src="images/catalog/4.jpg" width="220" height="200" alt="">
                                 <h3 class="product-card-title">Nivea Men шампунь-уход  «Экстремальная свежесть с ментолом»Шампунь для мужчин Brews Daily</h3>
                             </a>
-                            <span class="product-card=price">173 ₽</span>
+                            <span class="product-card-price">173 ₽</span>
                             <a class="button product-card-button" href="#">Купить</a>
                         </li>
                         <li class="product-card">
@@ -169,7 +172,7 @@
                                 <img class="product-card-image" src="images/catalog/5.jpg" width="220" height="200" alt="">
                                 <h3 class="product-card-title">Шампунь Amplifier Thickening</h3>
                             </a>
-                            <span class="product-card=price">441 ₽</span>
+                            <span class="product-card-price">441 ₽</span>
                             <a class="button product-card-button" href="#">Купить</a>
                         </li>
                         <li class="product-card">
@@ -177,38 +180,40 @@
                                 <img class="product-card-image" src="images/catalog/6.jpg" width="220" height="200" alt="">
                                 <h3 class="product-card-title">American Crew шампунь Anti-Dandruff</h3>
                             </a>
-                            <span class="product-card=price">904 ₽</span>
+                            <span class="product-card-price">904 ₽</span>
                             <a class="button product-card-button" href="#">Купить</a>
                         </li>
                     </ul>
-                    <ul class="pagination">
-                        <li class="pagination-item">
-                            <a class="pagination-link pagination-prev pagination-disabled">
-                                <span class="visually-hidden">Предыдущая страница</span>
-                            </a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link pagination-current">1</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link" href="#">2</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link" href="#">3</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link" href="#">4</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link" href="#">5</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link pagination-next">
-                                <span class="visually-hidden">Следующая страница</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <button class="button button-show-more" type="button">Показать ещё</button>
+                    <div class="pagination-container">
+                        <ul class="pagination">
+                            <li class="pagination-item">
+                                <a class="pagination-link pagination-prev pagination-disabled">
+                                    <span class="visually-hidden">Предыдущая страница</span>
+                                </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link pagination-current">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#">5</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link pagination-next">
+                                    <span class="visually-hidden">Следующая страница</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <button class="button button-show-more" type="button">Показать ещё</button>
+                    </div>
                 </div>
 
             </section>
