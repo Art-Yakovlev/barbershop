@@ -29,7 +29,14 @@
 }
 
 /* Global */
+html{
+    height: 100%;
+}
 body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -59,6 +66,21 @@ body{
     color: #ffffff;
     background-color: #000000;
 }
+.navigation{
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+}
+.navigation-list{
+    width: 470px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.navigation-user{
+    max-width: 250px;
+    margin-left: auto;
+}
 .navigation-link{
     font-family: "PT Sans Narrow", sans-serif;
     line-height: 22px;
@@ -68,8 +90,14 @@ body{
     text-transform: uppercase;
     color: inherit;
 }
-
+.navigation-logo{
+    width: 140px;
+    margin-right: 100px;
+}
 /* Main */
+.main-container{
+    flex-grow: 1;
+}
 .main-index{
     color: #ffffff;
     background-color: #000000;
@@ -77,10 +105,25 @@ body{
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
-
+.page-container{
+    width: 940px;
+    margin: 0 auto;
+}
+.main-logo{
+    display: block;
+    margin: 0 auto;
+}
 /* Advantages */
 .advantages-list{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
     text-align: center;
+    list-style-type: none;
+}
+.advantages-item{
+    width: 277px;
 }
 .advantages-title{
     font-family: "PT Sans Narrow", sans-serif;
@@ -91,6 +134,9 @@ body{
 
 /* Index Columns */
 .index-columns{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
     color: #242424;
     background-color: #fbf7f4;
     background-image: url("../images/pattern.png");
@@ -98,6 +144,7 @@ body{
 
 /* Services */
 .services{
+    width: 390px;
     text-transform: uppercase;
 }
 .services-title{
@@ -116,6 +163,9 @@ body{
 }
 
 /* Gallery*/
+.gallery{
+    width: 390px;
+}
 .gallery-title{
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 32px;
@@ -126,6 +176,7 @@ body{
 
 /* Contacts */
 .contacts{
+    width: 350px;
     font-weight: 700;
 }
 .contacts-title{
@@ -153,6 +204,9 @@ body{
 }
 
 /* Appointment */
+.appointment{
+    width: 430px;
+}
 .appointment-title{
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 32px;
@@ -190,6 +244,15 @@ body{
     line-height: 28px;
     text-transform: uppercase;
 }
+.page-footer-container{
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+}
+.footer-contacts{
+    width: 200px;
+    margin-right: 130px;
+}
 .footer-contacts-address{
     font-style: normal;
 }
@@ -209,6 +272,10 @@ body{
     line-height: 26px;
     text-decoration-line: underline;
     text-transform: uppercase;
+}
+.footer-social{
+    margin-left: auto;
+    max-width: 190px;
 }
 
 /* Inner */
@@ -233,6 +300,13 @@ body{
 }
 
 /* Catalog filter */
+.catalog-products{
+    display: flex;
+}
+.catalog-filter{
+    width: 220px;
+    margin-right: 20px;
+}
 .catalog-filter-title{
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
@@ -243,7 +317,9 @@ body{
 .control-label{
     font-weight: 700;
 }
-
+.catalog-right-column{
+    width: 700px;
+}
 /* Sorting container */
 .sorting-container{
     color: #000000;
