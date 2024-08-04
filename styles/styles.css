@@ -29,19 +29,15 @@
 }
 
 /* Global */
-html{
-    height: 100%;
-}
-body{
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    font-family: "PT Sans", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: #242424;
-    background-color: #fbf7f4;
+.visually-hidden{
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* Buttons */
@@ -60,7 +56,23 @@ body{
     color: #242424;
     background-color: #ffffff;
 }
+
 /* Pages */
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #242424;
+    background-color: #fbf7f4;
+}
+
 /* Header */
 .page-header{
     color: #ffffff;
@@ -72,6 +84,8 @@ body{
     margin: 0 auto;
 }
 .navigation-list{
+    display: flex;
+    flex-wrap: wrap;
     width: 470px;
     margin: 0;
     padding: 0;
@@ -82,6 +96,8 @@ body{
     margin-left: auto;
 }
 .navigation-link{
+    display: block;
+    padding: 24px 20px;
     font-family: "PT Sans Narrow", sans-serif;
     line-height: 22px;
     font-weight: 700;
@@ -90,13 +106,21 @@ body{
     text-transform: uppercase;
     color: inherit;
 }
+.navigation-user .navigation-link{
+    min-width: 16px;
+    min-height: 22px;
+}
 .navigation-logo{
+    display: flex;
+    align-items: center;
     width: 140px;
     margin-right: 100px;
 }
 /* Main */
 .main-container{
     flex-grow: 1;
+    padding-top: 64px;
+    padding-bottom: 60px;
 }
 .main-index{
     color: #ffffff;
@@ -112,8 +136,12 @@ body{
 .main-logo{
     display: block;
     margin: 0 auto;
+    margin-bottom: 64px;
 }
 /* Advantages */
+.advantages{
+    margin-bottom: 58px;
+}
 .advantages-list{
     display: flex;
     justify-content: space-between;
@@ -126,28 +154,38 @@ body{
     width: 277px;
 }
 .advantages-title{
+    margin: 0;
+    margin-bottom: 56px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 32px;
     line-height: 35px;
     text-transform: uppercase;
+}
+.advantages-description{
+    margin: 0;
 }
 
 /* Index Columns */
 .index-columns{
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    margin-bottom: 31px;
+    padding: 40px;
     color: #242424;
     background-color: #fbf7f4;
     background-image: url("../images/pattern.png");
 }
-
+.index-columns:last-child{
+    margin-bottom: 0;
+}
 /* Services */
 .services{
     width: 390px;
     text-transform: uppercase;
 }
 .services-title{
+    margin: 0;
+    margin-bottom: 28px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 32px;
     line-height: 35px;
@@ -157,6 +195,7 @@ body{
     font-size: 20px;
     line-height: 28px;
     font-weight: 700;
+    list-style-type: none;
 }
 .services-price{
     color: #af7842;
@@ -167,6 +206,8 @@ body{
     width: 390px;
 }
 .gallery-title{
+    margin: 0;
+    margin-bottom: 20px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 32px;
     line-height: 35px;
@@ -180,6 +221,8 @@ body{
     font-weight: 700;
 }
 .contacts-title{
+    margin: 0;
+    margin-bottom: 24px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 32px;
     line-height: 35px;
@@ -208,6 +251,8 @@ body{
     width: 430px;
 }
 .appointment-title{
+    margin: 0;
+    margin-bottom: 20px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 32px;
     line-height: 35px;
@@ -231,6 +276,12 @@ body{
     background-color: #242424;
     background-image: url("/images/pattern.png");
 }
+.page-footer-container{
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
 .page-footer a {
     color: #ffffff;
 }
@@ -239,15 +290,12 @@ body{
     color: #dbb590;
 }
 .page-footer-title{
+    margin: 0;
+    margin-bottom: 14px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
     line-height: 28px;
     text-transform: uppercase;
-}
-.page-footer-container{
-    display: flex;
-    width: 940px;
-    margin: 0 auto;
 }
 .footer-contacts{
     width: 200px;
@@ -277,14 +325,35 @@ body{
     margin-left: auto;
     max-width: 190px;
 }
+.footer-social-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: 28px;
+    padding: 0;
+    list-style-type: none;
+}
+.footer-social-item{
+    width: 56px;
+    height: 44px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+.footer-social-item:nth-child(3n){
+    margin-right: 0;
+}
+
 
 /* Inner */
 .main-inner{
+    padding-top: 40px;
     color: #242424;
     background-color: #fbf7f4;
     background-image: url("/images/pattern.png");
 }
 .inner-header-title{
+    margin: 0;
+    margin-bottom: 16px;
     font-family: "PT Sans", sans-serif;
     font-size: 32px;
     line-height: 35px;
@@ -293,9 +362,14 @@ body{
 
 /* Breadcrumbs */
 .breadcrumbs{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
     color: #242424;
 }
 .breadcrumbs-link{
+    margin-right: 32px;
     color: inherit;
 }
 
@@ -322,11 +396,24 @@ body{
 }
 /* Sorting container */
 .sorting-container{
+    display: flex;
+    margin-bottom: 16px;
+    padding: 16px;
     color: #000000;
     background-color: #ffffff;
 }
+.sorting-container .button{
+    width: 56px;
+    height: 44px;
+}
 
 /* Product card */
+.product-card-list{
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+    list-style-type: none;
+}
 .product-card{
     color: #ffffff;
 }
@@ -348,9 +435,25 @@ body{
 
 /* Pagination */
 .pagination-container{
+    display: flex;
+    padding: 16px;
     background-color: #ffffff;
 }
+.pagination{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.pagination-item:not(:last-child){
+    margin-right: 8px;
+}
 .pagination-link{
+    display: block;
+    box-sizing: border-box;
+    width: 50px;
+    height: 44px;
+    padding: 14px 20px;
     line-height: 16px;
     font-weight: 700;
     text-decoration: none;
@@ -363,4 +466,7 @@ body{
 }
 .pagination-disabled{
     background-color: #595959;
+}
+.pagination-show-more{
+    margin-left: auto;
 }
