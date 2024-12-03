@@ -28,6 +28,24 @@
     font-display: swap;
 }
 
+/* Buttons */
+.button{
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.button-light{
+    color: #242424;
+    background-color: #FFFFFF;
+}
+
 /* Pages */
 html{
     height: 100%;
@@ -38,4 +56,262 @@ body{
     line-height: 24px;
     color: #000000;
     background-color: #FFFFFF;
+}
+
+/* Header */
+.page-header{
+    color: #FFFFFF;
+    background-color: #000000;
+}
+.navigation-list{
+    list-style-type: none;
+}
+.navigation-link{
+    font-family: "PT Sans Narrow", sans-serif;
+    line-height: 22px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+/* Main */
+.main-index{
+    color: #FFFFFF;
+    background-color: #000000;
+    background-image: url("/images/background.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+/* Advantages */
+.advantages-list{
+    text-align: center;
+    list-style-type: none;
+}
+.advantages-title{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 32px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+/* Index-Columns */
+.index-columns{
+    color: #242424;
+    background-color: #FBF7F4;
+    background-image: url("/images/pattern.png");
+}
+
+/* Services */
+.services{
+    text-transform: uppercase;
+}
+.services-title{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 700;
+}
+.services-list{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    list-style-type: none;
+}
+.services-price{
+    color: #AF7842;
+}
+
+/* Gallery */
+.gallery-title{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Contacts */
+.contacts{
+    font-weight: 700;
+}
+.contacts-title{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 32px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+.contacts-address{
+    font-style: normal;
+}
+.contacts-subtitle{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #AF7842;
+}
+.contacts-phone{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration: underline;
+    color: #242424;
+}
+.contacts-shedule{
+    list-style-type: none;
+}
+
+/* Appointment */
+.appointment-title{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 32px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+.appointment-description{
+    font-size: 14px;
+    line-height: 20px;
+    color: #595959;
+}
+.form-label{
+    line-height: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Footer */
+.page-footer{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #242424;
+    background-image: url("/images/pattern.png");
+}
+.page-footer a{
+    color: #FFFFFF;
+}
+.page-footer .htmlacademy-link{
+    color: #DBB590;
+}
+.page-footer-title{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+.footer-contacts-address{
+    font-style: normal;
+}
+.footer-contacts-address-phone{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    text-decoration: underline;
+}
+.footer-contacts-map-link{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.footer-social-list{
+    list-style-type: none;
+}
+
+/* Inner */
+.main-inner{
+    color: #242424;
+    background-color: #FBF7F4;
+    background-image: url("/images/pattern.png");
+}
+.inner-header-title{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 32px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+/* Breadcrumbs */
+.breadcrumbs{
+    line-height: 22px;
+    color: #242424;
+    list-style-type: none;
+}
+.breadcrumbs-link{
+    color: inherit;
+}
+
+/* Catalog filter */
+.catalog-filter-title{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+}
+.catalog-filter-list{
+    list-style-type: none;
+}
+.control{
+    line-height: 22px;
+    font-weight: 700;
+}
+
+/* Sorting container */
+.sorting-container{
+    color: #242424;
+    background-color: #FFFFFF;
+}
+
+/* Product cards */
+.product-card-list{
+    list-style-type: none;
+}
+.product-card{
+    background-color: #FFFFFF;
+}
+.product-card-link{
+    text-decoration: none;
+}
+.product-card-title{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+.product-card-price{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #814B18;
+}
+
+/* Pagination */
+.pagination-container{
+    background-color: #FFFFFF;
+}
+.pagination{
+    list-style-type: none;
+}
+.pagination-link{
+    line-height: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #000000;
+    text-decoration: none;
+}
+.pagination-current{
+    color: #242424;
+    background-color: #FFFFFF;
+}
+.pagination-disabled{
+    background-color: #595959;
 }
