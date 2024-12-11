@@ -41,6 +41,8 @@
 
 /* Buttons */
 .button{
+    display: inline-block;
+    padding: 14px 20px;
     font-family: inherit;
     font-size: 16px;
     line-height: 16px;
@@ -48,6 +50,7 @@
     text-align: center;
     color: #FFFFFF;
     background-color: #000000;
+    border: none;
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
@@ -197,11 +200,17 @@ body{
     font-weight: 700;
 }
 .services-list{
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
     line-height: 28px;
     font-weight: 700;
     list-style-type: none;
+}
+.services-item{
+    margin-bottom: 22px;
 }
 .services-price{
     color: #AF7842;
@@ -234,15 +243,22 @@ body{
     line-height: 35px;
     text-transform: uppercase;
 }
-.contacts-address{
-    font-style: normal;
-}
 .contacts-subtitle{
+    margin: 0;
+    margin-bottom: 8px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
     line-height: 28px;
     text-transform: uppercase;
     color: #AF7842;
+}
+.contacts-address{
+    margin-bottom: 22px;
+    font-style: normal;
+}
+.contacts-address-text{
+    margin: 0;
+    margin-bottom: 8px;
 }
 .contacts-phone{
     font-family: "PT Sans Narrow", sans-serif;
@@ -252,9 +268,17 @@ body{
     color: #242424;
 }
 .contacts-shedule{
+    margin: 0;
+    margin-bottom: 21px;
+    padding: 0;
     list-style-type: none;
 }
-
+.contacts-navigation{
+    margin: 0;
+}
+.button + .button{
+    margin-left: 16px;
+}
 /* Appointment */
 .appointment{
     width: 430px;
@@ -328,7 +352,16 @@ body{
     width: 200px;
     margin-right: 130px;
 }
+.footer-contacts-logo{
+    display: inline-block;
+    margin-bottom: 24px;
+}
+.footer-about-text{
+    margin: 0;
+    margin-bottom: 4px;
+}
 .footer-contacts-address{
+    margin-bottom: 16px;
     font-style: normal;
 }
 .footer-contacts-address-phone{
@@ -352,6 +385,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin: 0;
+    margin-bottom: 36px;
     padding: 0;
     list-style-type: none;
 }
@@ -363,6 +397,9 @@ body{
 }
 .footer-social-item:nth-child(3n){
     margin-right: 0;
+}
+.copyright-about-text{
+    margin: 0;
 }
 
 /* Inner */
