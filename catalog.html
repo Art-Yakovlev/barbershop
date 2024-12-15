@@ -26,16 +26,27 @@
                 <ul class="navigation-list navigation-user">
                     <li class="navigation-item">
                         <a class="navigation-link" href="#">
+                            <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 6.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0zm-.7 5.2C9.3 12.5 8 13 6.5 13a6.5 6.5 0 1 1 5.2-2.7l4 4-1.4 1.4-4-4z"/>
+                            </svg>
                             <span class="visually-hidden">Поиск</span>
                         </a>
                     </li>
                     <li class="navigation-item">
                         <a class="navigation-link" href="#">
+                            <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 6l.6-5V0h8.8v1l.5 5h2.7l-.1 1.1-1 8-.1.9H1.6v-.9l-1-8L.3 6H3zm2.1 0h5.8l-.4-4h-5L5 6zm-1.7 8l-.8-6h10.8l-.8 6H3.4zm5.1-4.5v3h2v-3h-2zm-3 3v-3h2v3h-2z"/>
+                            </svg>
                             <span class="visually-hidden">Корзина</span>
                         </a>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link" href="#">Вход</a>
+                        <a class="navigation-link" href="#">
+                            <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2a6 6 0 0 0-6 6h12a6 6 0 0 0-6-6z"/>
+                            </svg>
+                            <span class="visually-hidden">Профиль</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -124,15 +135,23 @@
                     </form>
                     <div class="catalog-right-column">
                         <div class="sorting-container">
-                            <select class="select-control" aria-label="Сортировка">
-                                <option value="popular">Сначала популярное</option>
-                                <option value="cheap">Сначала дешёвое</option>
-                                <option value="expensive">Сначала дорогое</option>
-                            </select>
-                            <a class="button button-light" href="#">
+                            <div class="select sorting-type">
+                                <select class="select-control" aria-label="Сортировка">
+                                    <option value="popular">Сначала популярное</option>
+                                    <option value="cheap">Сначала дешёвое</option>
+                                    <option value="expensive">Сначала дорогое</option>
+                                </select>
+                            </div>
+                            <a class="card-grid-toggle" href="#">
+                                <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M2 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-2 8a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM7 1a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2H7zM6 8c0-.6.4-1 1-1h8a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1zm1 5a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2H7z"/>
+                                </svg>
                                 <span class="visually-hidden">Показать список</span>
                             </a>
-                            <a class="button" href="#">
+                            <a class="card-grid-toggle card-grid-toggle-current" href="#">
+                                <svg aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM0 8a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0zm2 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm-8 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0zm2 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0z"/>
+                                </svg>
                                 <span class="visually-hidden">Показать карточки</span>
                             </a>
                         </div>
