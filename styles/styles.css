@@ -56,6 +56,23 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+.button:hover,
+.footer-social-link:hover{
+    background-color: #814B18;
+}
+.button:focus,
+.footer-social-link:focus{
+    outline: 2px solid #DBB590;
+    background-color: #814B18;
+}
+.button:disabled{
+    background-color: #595959;
+}
+.button:disabled:hover{
+    background-color: #595959;
+    outline: none;
+    cursor: default;
+}
 .button-all{
     padding-right: 44px;
     background-image: url("../images/arrow-right.svg");
@@ -63,9 +80,16 @@
     background-size: 16px 16px;
     background-position: center right 20px;
 }
-.button-light{
+.button-feedback{
     color: #242424;
     background-color: #FFFFFF;
+}
+.button-feedback:hover{
+    background-color: #DBB590;
+}
+.button-feedback:focus{
+    outline: 2px solid #AF7842;
+    background-color: #DBB590;
 }
 
 /* Pages */
@@ -126,6 +150,21 @@ body{
     text-transform: uppercase;
     color: inherit;
 }
+.navigation-link-current::before{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    height: 4px;
+    background-color: #FFFFFF;
+    content: "";
+}
+.navigation-link:hover{
+    background-color: #595959;
+}
+.navigation-link:focus{
+    box-shadow: inset 0 0 0 4px #E7E7E7;
+}
 .navigation-user .navigation-link{
     min-width: 16px;
     min-height: 22px;
@@ -140,6 +179,12 @@ body{
     bottom: 0;
     left: 0;
     margin: auto;
+    fill: #DBDBDB;
+}
+.navigation-link:hover .navigation-icon{
+    fill: #242424;
+}
+.navigation-link:focus .navigation-icon{
     fill: #DBDBDB;
 }
 .navigation-link-login .navigation-icon{
@@ -187,6 +232,7 @@ body{
     width: 277px;
 }
 .advantages-title{
+    position: relative;
     margin: 0;
     margin-bottom: 56px;
     font-family: "PT Sans Narrow", sans-serif;
@@ -194,12 +240,24 @@ body{
     line-height: 35px;
     text-transform: uppercase;
 }
+.advantages-title::before{
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin-left: -9px;
+    background-color: #FFFFFF;
+    content: "";
+    transform: rotate(45deg);
+}
 .advantages-description{
     margin: 0;
 }
 
 /* Index-Columns */
 .index-columns{
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 31px;
@@ -207,6 +265,20 @@ body{
     color: #242424;
     background-color: #FBF7F4;
     background-image: url("/images/pattern.png");
+}
+.index-columns::after{
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    width: 0;
+    border-right: 1px dashed #595959;
+    content: "";
+}
+.index-columns:first-of-type::after{
+    left: 470px;
+}
+.index-columns:last-of-type::after{
+    left: 430px;
 }
 .index-columns:last-child{
     margin-bottom: 0;
@@ -236,9 +308,21 @@ body{
     list-style-type: none;
 }
 .services-item{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
     margin-bottom: 22px;
 }
+.services-item::before{
+    flex-grow: 1;
+    order: 2;
+    margin-right: 16px;
+    margin-left: 16px;
+    border-bottom: 2px dotted rgba(89, 89, 89, 0.5);
+    content: "";
+}
 .services-price{
+    order: 3;
     color: #AF7842;
 }
 
@@ -481,8 +565,24 @@ body{
     color: #242424;
     list-style-type: none;
 }
-.breadcrumbs-link{
+.breadcrumbs-item{
+    position: relative;
     margin-right: 32px;
+}
+.breadcrumbs-item::after{
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    width: 8px;
+    height: 8px;
+    background-color: #242424;
+    transform: rotate(45deg);
+    content: "";
+}
+.breadcrumbs-item:last-child::after {
+    content: none;
+}
+.breadcrumbs-link{
     line-height: 22px;
     color: inherit;
 
@@ -537,8 +637,19 @@ body{
     height: 44px;
     background-color: #FFFFFF;
 }
+.card-grid-toggle:hover {
+    background-color: #814b18;
+}
+.card-grid-toggle:focus {
+    outline: 2px solid #dbb590;
+    background-color: #4e2e0e;
+}
 .card-grid-toggle svg{
     fill: #000000;
+}
+.card-grid-toggle:hover svg,
+.card-grid-toggle:focus svg {
+    fill: #ffffff;
 }
 .card-grid-toggle-current{
     background-color: #000000;
@@ -614,6 +725,13 @@ body{
     color: #FFFFFF;
     background-color: #000000;
     text-decoration: none;
+}
+.pagination-link:hover {
+    background-color: #814b18;
+}
+.pagination-link:focus {
+    outline: 2px solid #dbb590;
+    background-color: #4e2e0e;
 }
 .pagination-current{
     color: #242424;
